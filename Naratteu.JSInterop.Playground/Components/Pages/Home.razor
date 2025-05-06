@@ -5,8 +5,13 @@
 
 <h1>Hello, world!</h1>
 
-@{
+@code {
     ElementReference ef;
 }
 <button onclick='alert("click!")' @ref=ef>click me</button>
 <button @onclick='async ()=> await js.InvokeVoidAsync("HTMLElement.prototype.click.call", ef)'>click that</button>
+
+@using Naratteu.JSInterop.Dom
+@inject HTMLElement he
+<button onclick='alert("click!2")' @ref=he.Ref>click me2</button>
+<button @onclick='async () => await he.click()'>click that2</button>

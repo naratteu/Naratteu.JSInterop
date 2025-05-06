@@ -4,6 +4,6 @@
 
 ```bash
 dotnet new blazor --empty --force
-git restore Components/Pages/Home.razor *.csproj
+git restore Components/Pages/Home.razor *.csproj Program.cs
 dotnet run
 ```
